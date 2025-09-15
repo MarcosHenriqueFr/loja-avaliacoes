@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Avaliações</title>
+	<style type="text/css">
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			margin-top: 50px;
+		}
+			
+		form {
+			width: 450px;
+			margin: auto;
+			display: flex;
+			gap: 20px;
+			flex-direction: column;
+		}
+		
+		.grupo-form {
+			background-color: #63DBD6;
+			display: flex;
+			
+			justify-content: space-between;
+			align-items: center;
+			
+			width: 100%;
+		}
+		
+		.inputs {
+			font-size: 16px;
+			padding: 15px;
+			
+			width: 70%;
+		}
+		
+		label {
+			font-size: 16px;
+			font-weight: bold;
+		}
+			
+		button {
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			border: none;
+			
+			background-color: #6395DB;
+			transition: 0.5s;
+		}
+		
+		button:hover {
+			font-weight: bold;
+			background-color: #5681BE;
+		}
+		
+		#msgInput {
+			font-size: 16px;
+		
+			resize: none;
+			height: 150px;
+			text-align: justify;
+		}
+	</style>
+</head>
+<body>
+	<form action="AvaliacaoServlet" method="post">
+		<h1>Dê sua avaliação aqui: </h1>
+		<div class="grupo-form">
+			<label>Nome: </label> 
+			<input type="text" class="inputs" name="nome"
+				   id="nomeInput" placeholder="Insira o nome...">
+		</div>
+		<div class="grupo-form">
+			<label>Email: </label> 
+			<input type="email" class="inputs" name="email"
+				   id="emailInput" placeholder="Insira o email...">		
+		</div>
+		<div class="grupo-form">
+			<label>Mensagem: </label> 
+			<textarea class="inputs" name="mensagem"
+					  id="msgInput" placeholder="Insira a mensagem...">
+		  	</textarea>		
+		</div>
+		<button type="submit">Enviar</button>
+	</form>
+</body>
+</html>
